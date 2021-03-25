@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47fe1d93-a9b2-44c6-b662-8c0a42858fa8" name="Default Changelist" comment="Added template stuff">
+    <list default="true" id="47fe1d93-a9b2-44c6-b662-8c0a42858fa8" name="Default Changelist" comment="Very basic implementation of a backend">
+      <change afterPath="$PROJECT_DIR$/src/ArticleService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/RecommenderController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EngineService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/my-srf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/my-srf.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +25,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -62,10 +73,13 @@
       <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
       <path value="$PROJECT_DIR$/vendor/twig/extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client" />
     </include_path>
   </component>
   <component name="ProjectId" id="1qFcKnx8vGyqSgprkoRM3bfl3om" />
   <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -76,6 +90,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="options.lastSelected" value="org.jetbrains.plugins.terminal.TerminalOptionsConfigurable" />
@@ -93,7 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1616678717154</updated>
       <workItem from="1616678718345" duration="340000" />
-      <workItem from="1616679082901" duration="918000" />
+      <workItem from="1616679082901" duration="6612000" />
     </task>
     <task id="LOCAL-00001" summary="Something something">
       <created>1616679286895</created>
@@ -123,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616679944482</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Call template in index">
+      <created>1616680431049</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1616680431049</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,7 +171,9 @@
     <MESSAGE value="Something something" />
     <MESSAGE value="Heroku stuff" />
     <MESSAGE value="Added template stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added template stuff" />
+    <MESSAGE value="Call template in index" />
+    <MESSAGE value="Very basic implementation of a backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Very basic implementation of a backend" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

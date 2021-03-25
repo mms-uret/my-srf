@@ -37,6 +37,9 @@
 					<button class="like">Like</button>
 					<button class="unlike">Unlike</button>
 				</div>
+				{% if recommender is defined %}
+				{{ dump(recommender) }}
+				{% endif %}
 			</main>
 		</div>
 	</body>

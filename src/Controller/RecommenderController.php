@@ -4,38 +4,16 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Contracts\HttpClient\HttpClientInterface;
 
-class IndexController extends AbstractController
+class RecommenderController extends AbstractController
 {
     /**
-     * @Route("/", name="index")
+     * @Route("/recommender/author", name="recommender_author")
      */
-    public function index(): Response
+    public function author(): Response
     {
-       return $this->render('base.html.twig');
-    }
-
-    /**
-     * @Route("/add/{id}/{rating}", name="add")
-     */
-    public function addArticle(int $id, int $rating, SessionInterface $session)
-    {
-        $articles = $session->get('articles', []);
-        $articles[] = ['id' => $id, 'rating' => $rating];
-        $session->set('articles', $articles);
-
-        return $this->json(['msg' => 'article recorded', 'count' => count($articles)]);
-    }
-
-    /**
-     * @Route("/send", name="send")
-     */
-    public function send(SessionInterface $session)
-    {
-        $fakeResponse = [
+        return $this->json([
             'name' => 'author_recom',
             'reason' => 'Aufgrund Ihrer Angaben, Popularität und Aktualität werden Ihnen die Artikel von [Platzhalter siehe Reason unten] angezeigt.',
             'certainty' => 1,
@@ -91,8 +69,6 @@ class IndexController extends AbstractController
                     'reason' => 'David Karasek',
                 ],
             ],
-        ];
-        $session->set('articles', []);
-        return $this->render('base.html.twig', ['recommender' => $fakeResponse]);
+        ]);
     }
 }
