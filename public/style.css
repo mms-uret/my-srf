@@ -1,0 +1,67 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Montserrat";
+	margin: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.wrapper {
+	max-width: 600px;
+	margin-bottom: 50px;
+}
+
+img {
+	max-width: 100%;
+}
+
+header {
+	text-align: center;
+	margin-bottom: 80px;
+}
+
+article {
+	border: 1px solid black;
+	padding: 15px;
+}
+
+button {
+	margin-top: 15px;
+	border: 1px solid black;
+	padding: 5px 10px;
+	background: white;
+	border-radius: 5px;
+}
+
+button.like {
+	border-color: #3a8b3a;
+	color: #3a8b3a;
+}
+
+button.unlike {
+	border-color: #8b3a3a;
+	color: #8b3a3a;
+}
+
+button:hover {
+	cursor: pointer;
+	color: white;
+}
+
+button.like:hover {
+	background-color: #6aaa6a;
+}
+
+button.unlike:hover {
+	background-color: #aa6a6a;
+}
+
+.action-buttons {
+	display: flex;
+	justify-content: space-between;
+}

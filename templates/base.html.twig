@@ -1,19 +1,43 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>MySFR Project</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<h1>Recommanded by [engine]</h1>
+				<p>Based on your interest in [author]</p>
+				<div>Certainty: <span>X %</span></div>
+			</header>
 
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+			<main>
+				<article>
+					<img src="https://placehold.it/800x300" alt="" />
+					<div>kicker</div>
+					<h2>Title of the article</h2>
+					<p>
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus
+						exercitationem rem quisquam itaque aspernatur id quis, nam, soluta
+						optio amet totam dolorem officiis, reiciendis animi excepturi
+						voluptatibus voluptatum. Dolorum, nulla.
+					</p>
+					<div>Metadatas</div>
+				</article>
+				<div class="action-buttons">
+					<button class="like">Like</button>
+					<button class="unlike">Unlike</button>
+				</div>
+			</main>
+		</div>
+	</body>
 </html>
