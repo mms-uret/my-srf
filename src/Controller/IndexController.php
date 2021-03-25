@@ -13,9 +13,6 @@ class IndexController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->json([
-            'message' => 'Hi!',
-            'path' => 'src/Controller/IndexController.php',
-        ]);
+        return $this->render('base.html.twig');
     }
 }
