@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47fe1d93-a9b2-44c6-b662-8c0a42858fa8" name="Default Changelist" comment="" />
+    <list default="true" id="47fe1d93-a9b2-44c6-b662-8c0a42858fa8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/IndexController.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -82,6 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1616678717154</updated>
       <workItem from="1616678718345" duration="340000" />
+      <workItem from="1616679082901" duration="188000" />
     </task>
     <servers />
   </component>
