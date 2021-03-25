@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47fe1d93-a9b2-44c6-b662-8c0a42858fa8" name="Default Changelist" comment="Something something">
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+    <list default="true" id="47fe1d93-a9b2-44c6-b662-8c0a42858fa8" name="Default Changelist" comment="Heroku stuff">
+      <change beforePath="$PROJECT_DIR$/.idea/my-srf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/my-srf.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +62,12 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
       <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
       <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/apache-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/twig/extra-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1qFcKnx8vGyqSgprkoRM3bfl3om" />
@@ -87,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1616678717154</updated>
       <workItem from="1616678718345" duration="340000" />
-      <workItem from="1616679082901" duration="311000" />
+      <workItem from="1616679082901" duration="671000" />
     </task>
     <task id="LOCAL-00001" summary="Something something">
       <created>1616679286895</created>
@@ -96,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616679286895</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Heroku stuff">
+      <created>1616679523573</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616679523573</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,7 +134,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Something something" />
-    <option name="LAST_COMMIT_MESSAGE" value="Something something" />
+    <MESSAGE value="Heroku stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Heroku stuff" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
