@@ -13,34 +13,90 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<div class="wrapper">
-			<header>
-				<h1>Recommanded by [engine]</h1>
-				<p>Based on your interest in [author]</p>
-				<div>Certainty: <span>X %</span></div>
-			</header>
+		<header>
+			<div class="banner">
+				<img src="logo.png" alt="SRF" class="logo" />
+				<h1>News</h1>
+			</div>
+			<ul>
+				<li>My SRF</li>
+			</ul>
+		</header>
 
-			<main>
-				<article>
-					<img src="https://placehold.it/800x300" alt="" />
-					<div>kicker</div>
-					<h2>Title of the article</h2>
-					<p>
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus
-						exercitationem rem quisquam itaque aspernatur id quis, nam, soluta
-						optio amet totam dolorem officiis, reiciendis animi excepturi
-						voluptatibus voluptatum. Dolorum, nulla.
-					</p>
-					<div>Metadatas</div>
-				</article>
-				<div class="action-buttons">
-					<button class="like">Like</button>
-					<button class="unlike">Unlike</button>
+		<main>
+			<div class="wrapper">
+				<div class="info">
+					<h2>Personalize mySRF</h2>
+					<strong>1/10</strong>
 				</div>
-				{% if recommender is defined %}
-				{{ dump(recommender) }}
-				{% endif %}
-			</main>
-		</div>
+
+				<div class="articles">
+					<article>
+						<img src="https://picsum.photos/800/300" alt="" />
+						<div class="body">
+							<div class="mark">kicker</div>
+							<h2>This is the title of the 1st article</h2>
+							<div class="meta">With video</div>
+						</div>
+					</article>
+
+					<article class="next">
+						<img src="https://picsum.photos/800/300" alt="" />
+						<div class="body">
+							<div class="mark">kicker 2</div>
+							<h2>This is the title of the 2nd article</h2>
+							<div class="meta">With video</div>
+						</div>
+					</article>
+
+					<article class="hidden">
+						<img src="https://picsum.photos/800/300" alt="" />
+						<div class="body">
+							<div class="mark">kicker 3</div>
+							<h2>This is the title of the 3rd article</h2>
+							<div class="meta">With video</div>
+						</div>
+					</article>
+				</div>
+
+				<div class="cta">
+					<h3>Are you interested in this article ?</h3>
+					<div class="action-buttons">
+						<button class="like"></button>
+						<button class="unlike"></button>
+					</div>
+					<button class="big-button">Finish</button>
+				</div>
+			</div>
+			{% if recommender is defined %}
+			{{ dump(recommender) }}
+			{% endif %}
+		</main>
+
+		<script>
+			let transition = () => {
+				let article = document.querySelector("article");
+				let next = document.querySelector("article.next");
+				let hidden = document.querySelector("article.hidden");
+
+				article.classList.add("bye");
+				next.classList.add("hello");
+				next.classList.remove("next");
+				hidden.classList.remove("hidden");
+				hidden.classList.add("next");
+				setTimeout(() => {
+					article.remove();
+				}, 200);
+			};
+
+			let el = document.querySelector("button.unlike");
+			el.addEventListener("click", (event) => {
+				transition();
+			});
+			let el2 = document.querySelector("button.like");
+			el2.addEventListener("click", (event) => {
+				transition();
+			});
+		</script>
 	</body>
 </html>

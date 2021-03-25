@@ -15,7 +15,20 @@ class IndexController extends AbstractController
      */
     public function index(): Response
     {
-       return $this->render('base.html.twig');
+        // $handle = fopen("../data/mini-articles.csv", "r");
+        // $isFirst = true;
+        // while ($line = fgetcsv($handle, 0, ";")) {
+        //     if (!$isFirst) {
+
+        //         var_dump($line[3]); die;
+
+        //     }
+        //     $isFirst = false;
+        // };
+        // fclose($handle);
+
+
+       return $this->render('base.html.twig', ["engine" => "stuff"]);
     }
 
     /**
