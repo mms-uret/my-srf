@@ -20,7 +20,7 @@ class IndexController extends AbstractController
             'name' => 'Random article rater',
             'certainty' => 1,
             'reason' => 'To get the initial set of articles to rate',
-            'articles' => $articleService->seed(10)
+            'articles' => $articleService->enrichRecommenderInfos($articleService->seed(10))
         ];
         return $this->render('base.html.twig', ['recommender' => $seed]);
     }

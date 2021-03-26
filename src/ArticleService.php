@@ -20,14 +20,19 @@ class ArticleService
 
     public function info(int $id): array
     {
-        return $this->httpClient->request('get', 'https://www.srf.ch/articleinfo/' . $id)->toArray();
+        return $this->httpClient->request('GET', 'https://www.srf.ch/articleinfo/' . $id)->toArray();
     }
 
     public function seed(int $count = 10): array
     {
-        $ids = $this->parameterBag->get('ids');
+        $ids = explode(",", $this->parameterBag->get('ids'));
         shuffle($ids);
         $ids = array_slice($ids, 0, $count);
-        return array_map(fn($id) => ['id' => $id, 'certainty' => 1], $ids);
+        return array_map(fn($id) => ['id' => $id, 'certainty' => 1, 'reason' => 'Random'], $ids);
+    }
+
+    public function enrichRecommenderInfos(array $articles): array
+    {
+        return array_map(fn ($article) => ['id' => $article['id'], 'certainty' => $article['certainty'], 'reason' => $article['reason'], 'info' => $this->info($article['id'])], $articles);
     }
 }
