@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
+		
 		<header>
 			<div class="banner">
 				<img src="logo.png" alt="SRF" class="logo" />
@@ -22,14 +23,13 @@
 				<li>My SRF</li>
 			</ul>
 		</header>
-
+		
 		<main>
 			<div class="wrapper">
 				<div class="info">
 					<h2>Personalize mySRF</h2>
-					<strong>1/10</strong>
 				</div>
-
+		
 				<div class="articles">
 					{% for article in articles %}
 					<article {% if loop.index == 2 %}class="next"{% elseif loop.index > 2 %}class="hidden"{% endif %} data-id="{{ article.id }}">
@@ -43,24 +43,24 @@
 					{% endfor %}
 
 				</div>
-
+		
 				<div class="cta">
 					<h3>Are you interested in this article ?</h3>
 					<div class="action-buttons">
 						<button class="like"></button>
 						<button class="unlike"></button>
 					</div>
-					<a href="{{ path('send') }}"><button class="big-button">Finish</button></a>
+					<a href="{{ path('send') }}" class="big-button">Finish</a>
 				</div>
 			</div>
 		</main>
-
+		
 		<script>
 			let transition = () => {
 				let article = document.querySelector("article");
 				let next = document.querySelector("article.next");
 				let hidden = document.querySelector("article.hidden");
-
+		
 				article.classList.add("bye");
 				next.classList.add("hello");
 				next.classList.remove("next");
@@ -70,7 +70,7 @@
 					article.remove();
 				}, 200);
 			};
-
+		
 			let el = document.querySelector("button.unlike");
 			el.addEventListener("click", (event) => {
 				const id = document.querySelector('article:first-child').getAttribute('data-id');
@@ -84,5 +84,6 @@
 				transition();
 			});
 		</script>
+
 	</body>
 </html>

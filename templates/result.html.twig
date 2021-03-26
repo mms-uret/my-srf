@@ -25,54 +25,39 @@
 
 		<main>
 			<div class="wrapper">
-				<div class="info">
-					<h2>Personalize mySRF</h2>
-					<strong>1/10</strong>
-				</div>
-
+		
 				{% for recommender in recommenders %}
 				<div>
-					<h3>{{ recommender.name }}</h3>
+					<h2>Recommended by {{ recommender.name }}</h3>
 					<p>{{ recommender.reason }}</p>
-					<ul>
+					<ul class="recommend-list">
 						{% for article in recommender.recommendations %}
-							<li>reason: {{ article.reason }}, certainty: {{ article.certainty }} Title: <a href="{{ article.info.representationLinks.web }}">{{ article.info.title }}</a></li>
+						<li>
+
+							<article data-id="{{ article.id }}">
+								<a target="_blank" href="{{ article.info.representationLinks.web }}">
+								<img src="{{ article.info.image.variations["480ws"] }}" alt="" />
+									<div class="body">
+										<div class="mark">{{ article.info.kicker }}</div>
+										<h2>{{ article.info.title }}</h2>
+										<div class="meta">Reason: {{ article.reason }}<br>Certainty: {{ article.certainty }}</div>
+									</div>
+								</a>
+							</article>
+
+
+						</li>
 						{% endfor %}
 					</ul>
 				</div>
 				{% endfor %}
 
+				<div class="cta-recommend">
+					<a href="{{ path('index') }}" class="big-button">Get new recommendations</a>
+				</div>
+
 			</div>
 		</main>
 
-		<script>
-			let transition = () => {
-				let article = document.querySelector("article");
-				let next = document.querySelector("article.next");
-				let hidden = document.querySelector("article.hidden");
-
-				article.classList.add("bye");
-				next.classList.add("hello");
-				next.classList.remove("next");
-				hidden.classList.remove("hidden");
-				hidden.classList.add("next");
-				setTimeout(() => {
-					article.remove();
-				}, 200);
-			};
-
-			let el = document.querySelector("button.unlike");
-			el.addEventListener("click", (event) => {
-				const id = document.querySelector('article:first-child').getAttribute('data-id');
-				fetch('/rate/' + id + '/0');
-				transition();
-			});
-			let el2 = document.querySelector("button.like");
-			el2.addEventListener("click", (event) => {
-				const id = document.querySelector('article:first-child').getAttribute('data-id');
-				fetch('/rate/' + id + '/1');
-				transition();
-			});
-		</script>
 	</body>
 </html>
