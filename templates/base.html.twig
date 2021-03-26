@@ -31,7 +31,7 @@
 				</div>
 
 				<div class="articles">
-					{% for article in recommender.articles %}
+					{% for article in articles %}
 					<article {% if loop.index == 2 %}class="next"{% elseif loop.index > 2 %}class="hidden"{% endif %}>
 						<img src="{{ article.info.image.variations["480ws"] }}" alt="" />
 						<div class="body">

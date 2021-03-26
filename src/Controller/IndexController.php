@@ -14,15 +14,11 @@ class IndexController extends AbstractController
     /**
      * @Route("/", name="index")
      */
-    public function index(ArticleService $articleService): Response
+    public function index(HttpClientInterface $httpClient, ArticleService $articleService): Response
     {
-        $seed = [
-            'name' => 'Random article rater',
-            'certainty' => 1,
-            'reason' => 'To get the initial set of articles to rate',
-            'articles' => $articleService->enrichRecommenderInfos($articleService->seed(10))
-        ];
-        return $this->render('base.html.twig', ['recommender' => $seed]);
+        $response = $httpClient->request('GET', 'https://srgrecrec.herokuapp.com/initial')->toArray();
+        $articles = $articleService->enrichRecommenderInfos($response['results'][0]['recommendations']);
+        return $this->render('base.html.twig', ['articles' => $articles]);
     }
 
     /**
