@@ -30,28 +30,18 @@
 					<strong>1/10</strong>
 				</div>
 
-				<div class="articles">
-					{% for article in articles %}
-					<article {% if loop.index == 2 %}class="next"{% elseif loop.index > 2 %}class="hidden"{% endif %} data-id="{{ article.id }}">
-						<img src="{{ article.info.image.variations["480ws"] }}" alt="" />
-						<div class="body">
-							<div class="mark">{{ article.info.kicker }}</div>
-							<h2>{{ article.info.title }}</h2>
-							<div class="meta">With video</div>
-						</div>
-					</article>
-					{% endfor %}
-
+				{% for recommender in recommenders %}
+				<div>
+					<h3>{{ recommender.name }}</h3>
+					<p>{{ recommender.reason }}</p>
+					<ul>
+						{% for article in recommender.recommendations %}
+						<li>{{ article.reason }}</li>
+						{% endfor %}
+					</ul>
 				</div>
+				{% endfor %}
 
-				<div class="cta">
-					<h3>Are you interested in this article ?</h3>
-					<div class="action-buttons">
-						<button class="like"></button>
-						<button class="unlike"></button>
-					</div>
-					<a href="{{ path('send') }}"><button class="big-button">Finish</button></a>
-				</div>
 			</div>
 		</main>
 
