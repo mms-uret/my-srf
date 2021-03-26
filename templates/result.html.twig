@@ -36,7 +36,7 @@
 					<p>{{ recommender.reason }}</p>
 					<ul>
 						{% for article in recommender.recommendations %}
-						<li>{{ article.reason }} Title: {{ article.info.title }}</li>
+							<li>reason: {{ article.reason }}, certainty: {{ article.certainty }} Title: <a href="{{ article.info.representationLinks.web }}">{{ article.info.title }}</a></li>
 						{% endfor %}
 					</ul>
 				</div>
