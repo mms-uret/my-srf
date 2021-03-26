@@ -31,32 +31,17 @@
 				</div>
 
 				<div class="articles">
-					<article>
-						<img src="https://picsum.photos/800/300" alt="" />
+					{% for article in recommender.articles %}
+					<article {% if loop.index == 2 %}class="next"{% elseif loop.index > 2 %}class="hidden"{% endif %}>
+						<img src="{{ article.info.image.variations["480ws"] }}" alt="" />
 						<div class="body">
-							<div class="mark">kicker</div>
-							<h2>This is the title of the 1st article</h2>
+							<div class="mark">{{ article.info.kicker }}</div>
+							<h2>{{ article.info.title }}</h2>
 							<div class="meta">With video</div>
 						</div>
 					</article>
+					{% endfor %}
 
-					<article class="next">
-						<img src="https://picsum.photos/800/300" alt="" />
-						<div class="body">
-							<div class="mark">kicker 2</div>
-							<h2>This is the title of the 2nd article</h2>
-							<div class="meta">With video</div>
-						</div>
-					</article>
-
-					<article class="hidden">
-						<img src="https://picsum.photos/800/300" alt="" />
-						<div class="body">
-							<div class="mark">kicker 3</div>
-							<h2>This is the title of the 3rd article</h2>
-							<div class="meta">With video</div>
-						</div>
-					</article>
 				</div>
 
 				<div class="cta">
@@ -68,9 +53,6 @@
 					<button class="big-button">Finish</button>
 				</div>
 			</div>
-			{% if recommender is defined %}
-			{{ dump(recommender) }}
-			{% endif %}
 		</main>
 
 		<script>
