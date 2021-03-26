@@ -234,6 +234,7 @@ a.big-button:hover {
 .recommend-list {
 	overflow: scroll;
 	padding: 10px 30px 20px;
+	margin: 0 -150px 50px;
 }
 
 .recommend-list article {
