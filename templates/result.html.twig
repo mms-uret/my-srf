@@ -40,7 +40,7 @@
 									<div class="body">
 										<div class="mark">{{ article.info.kicker }}</div>
 										<h2>{{ article.info.title }}</h2>
-										<div class="meta">Reason: {{ article.reason }}<br>Certainty: {{ article.certainty }}</div>
+										<div class="meta">Reason: {{ article.reason }}<br>Certainty: {{ (article.certainty * 100)|round }}%</div>
 									</div>
 								</a>
 							</article>
