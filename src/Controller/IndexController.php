@@ -39,9 +39,9 @@ class IndexController extends AbstractController
     public function send(SessionInterface $session, HttpClientInterface $httpClient, ArticleService $articleService)
     {
         $articles = $session->get('articles');
+        $session->set('articles', []);
         $response = $httpClient->request('GET', 'https://srgrecrec.herokuapp.com/recommend', ['json' => ['ratings' => $articles]])->toArray();
 
-        $session->set('articles', []);
         $recommenders = $response['results'];
         foreach ($recommenders as $key => $recommender) {
             $recommenders[$key]['recommendations'] = $articleService->enrichRecommenderInfos($recommenders[$key]['recommendations']);
